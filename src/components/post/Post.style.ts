@@ -18,7 +18,10 @@ type DescriptionProp = {
   fontSize: string;
   width: string;
 }
-export const Container = styled.section`
+type ContainerProp = {
+  padding: string;
+}
+export const Container = styled.section<ContainerProp>`
  padding:0 ${({padding}) => padding};
 `
 export const ImageBox = styled.div<HeightStyleProp>`
