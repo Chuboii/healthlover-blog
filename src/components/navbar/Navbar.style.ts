@@ -12,8 +12,6 @@ z-index: 10;
      left:0;
      right:0;
      top:0;
-
- 
 `
 export const Logo = styled.h1`
 font-size: 30px;
