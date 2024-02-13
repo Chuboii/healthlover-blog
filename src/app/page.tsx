@@ -8,6 +8,7 @@ import Recommendation from "@/components/recommendation/Recommendation";
 import SearchForm from "@/components/search form/SearchForm";
 import WelcomeTexts from "@/components/welcome texts/WelcomeTexts";
 import { Container, Wrap, Wrapper } from "./HomeStyle.style";
+import TrendingPosts from "@/components/trending/TrendingPosts";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         </Wrap>
         </Wrapper>
       <ExplorePosts />
+      <TrendingPosts/>
       <MightAlsoLikePost />
       <SearchForm />
       <BlurBg />

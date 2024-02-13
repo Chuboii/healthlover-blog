@@ -1,49 +1,30 @@
 'use client'
 import styled from 'styled-components'
 
-type WrapperStyleProp = {
-  gap: string;
-  width: string;
-  display: string;
-}
 
-type HeightStyleProp = {
-  height: string;
-}
-
-type FontSizeProp = {
-  fontSize: string;
-}
-type DescriptionProp = {
-  fontSize: string;
-  width: string;
-}
-type ContainerProp = {
-  padding: string;
-}
-export const Container = styled.section<ContainerProp>`
- padding:0 ${({padding}) => padding};
+export const Container = styled.section`
+ padding:0;
 `
-export const ImageBox = styled.div<HeightStyleProp>`
+export const ImageBox = styled.div`
 position:relative;
 width:100%;
-height: ${({height}) => height};
+height: 300px;
 border-radius: 10px;
 margin-bottom: .5rem;
 
 @media screen and (max-width:768px){
-   height:${({ height }) => height};
+   height:100px;
    margin-right: 1.5rem;
   }
 `
-export const Title = styled.h1<FontSizeProp>`
+export const Title = styled.h1`
  font-weight:900;
  line-height: 1.1;
- font-size:${({fontSize})=> fontSize};
+ font-size:20px;
  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
  @media screen and (max-width:768px){
- font-size:${({fontSize}) => fontSize};
+ font-size:20px;
   }
 
 `
@@ -64,16 +45,16 @@ background:#D9D7CB;
 padding:.3rem .9rem;
 border-radius:20px;
 `
-export const Wrapper = styled.div<WrapperStyleProp>`
+export const Wrapper = styled.div`
 margin:2rem 0;
-margin:${({ gap }) => gap};
-max-width: ${({ width }) => width};
+margin:0;
+max-width: 500px;
 
 @media screen and (max-width:768px){
    max-width:600px;
    width:100%;
    margin:.5rem 0;
-   display:${({display}) => display};
+   display:block;
 }
 `
 
@@ -86,14 +67,14 @@ export const WrapBox = styled.div`
   }
 `
 
-export const Description = styled.p<DescriptionProp>`
-width:${({width}) => width};
+export const Description = styled.p`
+width:200px;
 display: -webkit-box;
 -webkit-line-clamp: 3;
 -webkit-box-orient: vertical;
   overflow: hidden;
   max-height:100px;
-  font-size:${({fontSize}) => fontSize};
+  font-size:20px;
   text-overflow: ellipsis;
 
   @media screen and (max-width:768px){

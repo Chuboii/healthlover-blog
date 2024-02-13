@@ -6,15 +6,14 @@ export const Container = styled.nav`
  align-items: center; 
  justify-content: space-between;
  padding:1rem 1.5rem;
-
- @media screen and (max-width:768px){
+ background-color: #F1EFE3;
+z-index: 10;
      position:fixed;
      left:0;
      right:0;
      top:0;
-     padding:1rem 1.5rem;
 
-  }
+ 
 `
 export const Logo = styled.h1`
 font-size: 30px;

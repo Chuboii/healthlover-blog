@@ -4,10 +4,10 @@ import styled from "styled-components"
 export const Container = styled.aside`
  background: #5650AB;
  color:white;
- max-width: 400px;
  padding:1rem;
- width:100%;
+ max-width:500px;
  border-radius:30px;
+ width:100%;
  margin-top:2.5rem;
  @media screen and (max-width:768px){
     display:none;

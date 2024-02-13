@@ -1,20 +1,21 @@
 import LoadMoreBtn from "../buttons/load more/LoadMoreBtn"
-import { Container,WrapperBox,Description,Wrapper, ImageBox, Tags,WrapBox, Tag, Title, Author } from "./ExplorePosts.style"
+import { Container,WrapperBox,Description,Wrapper, ImageBox, Tags,WrapBox, Tag, Title, Author } from "./TrendingPosts.style"
 import Image from "next/image";
 
 const ImageStyles: {
   borderRadius: string;
 } = {
-  borderRadius: '20px'
+  borderRadius: '20px',
 }
 
 
-const ExplorePosts = () => {
+
+const TrendingPosts = () => {
 
 
   return (
       <Container>
-      <Title>Featured Posts</Title>
+      <Title>Trending Posts</Title>
       
           <WrapperBox>
       <Wrapper>
@@ -90,4 +91,4 @@ const ExplorePosts = () => {
   )
 }
 
-export default ExplorePosts
+export default TrendingPosts

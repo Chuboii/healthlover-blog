@@ -1,38 +1,33 @@
-'use client'
-import Post from "../post/Post"
-import { Container } from './Recommendation.style'
-import { useState, useEffect } from 'react'
+import { Container,Description,Wrapper, ImageBox, Tags,WrapBox, Tag, Title, Author } from "./Recommendation.style"
+import Image from "next/image";
 
+const ImageStyles: {
+    borderRadius: string;
+  } = {
+    borderRadius: '20px'
+}
+  
 const Recommendation = () => {
-  const [isMobile, setIsMobile] = useState(false)
-    
-  useEffect(() => {
-      const setMobileResponse = () => {
-          const windowWidth = window.innerWidth
-          if (windowWidth <= 768) {
-              setIsMobile(true)
-          }
-          else {
-              setIsMobile(false)
-          }
-      }
 
-      window.addEventListener("resize", setMobileResponse)
-
-      return () => {
-          window.removeEventListener("resize", setMobileResponse)
-      }
-  }, [isMobile])
- 
   
     return (
         <Container>
-        <Post
-          isMobile={isMobile} isMobileNewPostFont={false} isHorizontal={true} isNewPostSection={false} isMightLikeSection={false} />
-        
-        <Post
-          isMobile={isMobile} isMobileNewPostFont={false} isHorizontal={true} isNewPostSection={false} isMightLikeSection={false} />
-      </Container>
+        <Wrapper>
+    <ImageBox>
+    <Image style={ImageStyles} src='/images (14).jpeg' fill alt=''/>
+    </ImageBox>
+        <Tags>
+        <Tag>Idea</Tag>
+        <Tag>Retro</Tag>
+      </Tags>
+    <WrapBox>
+    <Title>I can solve new problems very easily</Title>
+         <Author>by Daryl Wehner</Author>
+    
+      </WrapBox>
+            </Wrapper>
+            
+    </Container>  
   )
 }
 

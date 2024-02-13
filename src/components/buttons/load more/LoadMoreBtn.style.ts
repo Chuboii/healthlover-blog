@@ -6,6 +6,9 @@ export const Button = styled.button`
   color:white;
   margin: 2rem auto;
   font-weight: 700;
+  position: relative;
+  left:50%;
+  transform:translateX(-50%);
   padding: 1.1rem 2rem;
   border-radius: 30px;
 `
